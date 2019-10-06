@@ -21,7 +21,7 @@ class database():
                 game = rows.fetchone()
                 if game is None:
                     break
-                print('Name: ', game.name, ', contact number: ', game.phone, ', Price : ', game.price, ',Location : ', game.postcode, game.long, game.lat)
+                print('Name: ', game.Game, ', contact number: ', game.Phone, ', Price : ', game.Price, ',Location : ', game.Postcode, game.Long, game.Lat)
 
         def add_game(self, game_name):
             longitude = game.long_find(game_name)
@@ -30,12 +30,13 @@ class database():
             self.conn_db.commit()
 
         def delete_game(self, game_name):
-            self.filter_query(f"DELETE FROM Recipe_Table WHERE Recipe_Name = '{game_name}'")
+            self.filter_query(f"DELETE FROM Games_db WHERE Game = '{game_name}'")
             self.conn_db.commit()
 
         def search_for_a_game(self, game_name):
             find_recipe = self.filter_query(f"SELECT * FROM Games_db WHERE Game = '{game_name}'")
-            return find_recipe.fetchone()
+            game = find_recipe.fetchone()
+            return 'Name: ', game.Game, ', contact number: ', game.Phone, ', Price : ', game.Price, ',Location : ', game.Postcode, game.Long, game.Lat
 
 
 
