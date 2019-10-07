@@ -1,6 +1,6 @@
 import requests
 
-class game():
+class Game():
     def __init__(self, name, phone, price, postcode, long = ' ', lat = ' '):
         self.name = name
         self.phone = phone
@@ -16,6 +16,7 @@ class game():
         post_code_dict = post_code.json()
         long1 = post_code_dict['result']['longitude']
         return long1
+
 
     def lat_find(self):
         pc = self.postcode

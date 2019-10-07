@@ -24,8 +24,8 @@ class database():
                 print('Name: ', game.Game, ', contact number: ', game.Phone, ', Price : ', game.Price, ',Location : ', game.Postcode, game.Long, game.Lat)
 
         def add_game(self, game_name):
-            longitude = game.long_find(game_name)
-            latitude = game.lat_find(game_name)
+            longitude = Game.long_find(game_name)
+            latitude = Game.lat_find(game_name)
             self.filter_query(f"INSERT INTO Games_db VALUES ('{game_name.name}','{game_name.phone}','{game_name.price}','{game_name.postcode}','{latitude}','{longitude}')")
             self.conn_db.commit()
 
@@ -42,6 +42,7 @@ class database():
             new_price = input('what is the new price?')
             find_game = self.filter_query(f"UPDATE Games_db SET Price = '{new_price}' WHERE Game = '{game_name}'")
             self.conn_db.commit()
+
 
 
 

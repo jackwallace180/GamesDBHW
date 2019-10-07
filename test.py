@@ -1,9 +1,21 @@
+
+import pytest
+
 from game_class import *
-from database_class import *
 
-conn_db =database( 'localhost,1433', 'GamesMarketplaceHW', 'SA', 'Passw0rd2018')
-# conn_db.print_all_games()
+test = Game('test', '03545', '£20', 'DA157JQ')
 
-# conn_db.delete_game('jack')
+def test_lat():
+    assert Game.lat_find(test) == 51.42991
 
-conn_db.change_price('space invaders')
+def test_long():
+    assert Game.long_find(test) == 0.089816
+
+def test_lat1():
+    assert type(Game.lat_find(test)) == float
+
+def test_long1():
+    assert type(Game.long_find(test)) == float
+
+def test_name():
+    assert type(test.name) == str

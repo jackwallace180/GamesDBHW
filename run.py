@@ -24,7 +24,7 @@ while True:
             phone1 = input('what is your contact number?')
             price1 = input('what is the price you want to list the game for?')
             postcode1 = input('what is your postcode?')
-            game1 = game(game_name1, phone1, price1, postcode1)
+            game1 = Game(game_name1, phone1, price1, postcode1)
             conn_db.add_game(game1)
             print('game added to our database!')
             input1 = int(input('press 1 to list all games, 2 to find a game, 3 to add/delete a game, press 4 to update price, press 5 to exit '))
@@ -43,9 +43,9 @@ while True:
         game_name1 = input('what is the game you want to change the price for? (use name from DB)')
         conn_db.change_price(game_name1)
         print('price updated!')
-
         input1 = int(input(
             'press 1 to list all games, 2 to find a game, 3 to add/delete a game, press 4 to update price, press 5 to exit '))
+
     elif input1 == 5:
         print('thank you for using Games! Games? Games..., goodbye!')
         break
