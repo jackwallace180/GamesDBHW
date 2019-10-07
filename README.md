@@ -22,5 +22,7 @@
 - search for a game (using game name from DB)
 - update a games price
 
+## run the run.py file to use the user input!! :triangular_flag_on_post:
+
 
 
