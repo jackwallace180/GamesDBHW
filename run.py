@@ -3,7 +3,7 @@ from database_class import *
 
 conn_db =database( 'localhost,1433', 'GamesMarketplaceHW', 'SA', 'Passw0rd2018')
 
-print('welcome to Games! Games? Games.')
+print('Welcome to Games! Games? Games...')
 input1 = int(input(
     'press 1 to list all games, 2 to find a game, 3 to add/delete a game, press 4 to exit '))
 while True:
@@ -40,7 +40,7 @@ while True:
             input1 = int(input('press 1 to list all games, 2 to find a game, 3 to add/delete a game, press 4 to exit '))
 
     elif input1 == 4:
-        print('thank you, goodbye!')
+        print('thank you for using Games! Games? Games..., goodbye!')
         break
 
     else:
