@@ -20,6 +20,7 @@
 - add game
 - delete game (using game name from DB)
 - search for a game (using game name from DB)
+- update a games price
 
 
 

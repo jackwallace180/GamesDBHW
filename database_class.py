@@ -34,9 +34,14 @@ class database():
             self.conn_db.commit()
 
         def print_a_game(self, game_name):
-            find_recipe = self.filter_query(f"SELECT * FROM Games_db WHERE Game = '{game_name}'")
-            game = find_recipe.fetchone()
+            find_game = self.filter_query(f"SELECT * FROM Games_db WHERE Game = '{game_name}'")
+            game = find_game.fetchone()
             print('Name: ', game.Game, ', contact number: ', game.Phone, ', Price : ', game.Price, ',Location : ', game.Postcode, game.Long, game.Lat)
+
+        def change_price(self, game_name):
+            new_price = input('what is the new price?')
+            find_game = self.filter_query(f"UPDATE Games_db SET Price = '{new_price}' WHERE Game = '{game_name}'")
+            self.conn_db.commit()
 
 
 
