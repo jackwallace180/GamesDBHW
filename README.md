@@ -7,14 +7,14 @@
  - as a user i can create a game
  - as a user i can destroy a game
 
- ## methods :calling:
+ ## methods :calling: :vhs:
 
- ### game class :battery:
+ ### game class :clubs: :hearts: :diamonds: :spades:
 
 - find longitude
 - find latitude
 
-### database class :satellite:
+### database class :satellite: :computer:
 
 - PRINT all
 - add game
