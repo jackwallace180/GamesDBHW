@@ -33,10 +33,10 @@ class database():
             self.filter_query(f"DELETE FROM Games_db WHERE Game = '{game_name}'")
             self.conn_db.commit()
 
-        def search_for_a_game(self, game_name):
+        def print_a_game(self, game_name):
             find_recipe = self.filter_query(f"SELECT * FROM Games_db WHERE Game = '{game_name}'")
             game = find_recipe.fetchone()
-            return 'Name: ', game.Game, ', contact number: ', game.Phone, ', Price : ', game.Price, ',Location : ', game.Postcode, game.Long, game.Lat
+            print('Name: ', game.Game, ', contact number: ', game.Phone, ', Price : ', game.Price, ',Location : ', game.Postcode, game.Long, game.Lat)
 
 
 

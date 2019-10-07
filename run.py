@@ -13,11 +13,11 @@ while True:
 
     elif input1 == 2:
         game = input('which game do you want to look up? (use name from table)')
-        print(conn_db.search_for_a_game(game))
+        conn_db.print_a_game(game)
         input1 = int(input('press 1 to list all games, 2 to find a game, 3 to add/delete a game, press 4 to exit '))
 
     elif input1 == 3:
-        result = input('do you want to add or delete a game to our database?')
+        result = input('do you want to add or delete a game to our database?').lower().strip()
 
         if result == 'add':
             game_name1 = input('what is the name of the game?')
