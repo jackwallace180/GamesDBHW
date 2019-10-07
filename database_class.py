@@ -26,7 +26,7 @@ class database():
         def add_game(self, game_name):
             longitude = game.long_find(game_name)
             latitude = game.lat_find(game_name)
-            self.filter_query(f"INSERT INTO Games_db VALUES ('{game_name.name}','{game_name.phone}','{game_name.price}','{game_name.postcode}','{longitude}','{latitude}')")
+            self.filter_query(f"INSERT INTO Games_db VALUES ('{game_name.name}','{game_name.phone}','{game_name.price}','{game_name.postcode}','{latitude}','{longitude}')")
             self.conn_db.commit()
 
         def delete_game(self, game_name):
